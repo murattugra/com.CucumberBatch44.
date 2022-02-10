@@ -1,5 +1,5 @@
 Feature: US1001_amazon_search
-
+@amazon
   Scenario: TC01_Amazon Search Testi
 
     Given kullanici amazon sayfasina gider
@@ -13,3 +13,18 @@ Feature: US1001_amazon_search
     Given kullanici amazon sayfasina gider
     And flower icin arama yapar
     Then sonuclarin flower icerdigini test eder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

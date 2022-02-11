@@ -5,13 +5,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import pages.AmazonPages;
+import pages.AmazonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class AmazonStepDefinitions {
 
-    AmazonPages amazonPages=new AmazonPages();
+    AmazonPage amazonPages=new AmazonPage();
 
     @Given("kullanici amazon sayfasina gider")
     public void kullanici_amazon_sayfasina_gider() {

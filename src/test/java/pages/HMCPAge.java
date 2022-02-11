@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class HotelMyCampPage {
+public class HMCPAge {
 
 
-    public HotelMyCampPage(){
+    public HMCPAge(){
 
         PageFactory.initElements(Driver.getDriver(),this);
 

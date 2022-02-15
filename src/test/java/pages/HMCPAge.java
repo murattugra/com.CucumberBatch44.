@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class HMCPAge {
 
 
@@ -51,5 +53,39 @@ public class HMCPAge {
     public WebElement addHotelSaveSuccesWord;
 
 
+
+
+
+    //  -->hotelManagement-->HotelRooms--> List Of Hotel Rooms
+
+    @FindBy(xpath = "(//i[@class='icon-calendar'])[3]")
+    public WebElement hotelRoomsLinki;
+
+    @FindBy(xpath = "//div[@class='caption']")
+    public WebElement listOfUsersYazisi;
+
+    @FindBy(xpath = "//div[@class='caption']")
+    public WebElement listOfHotelYazisi;
+
+    @FindBy(xpath = "//span[@class='hidden-480']")
+    public WebElement addHotelRoomButtonu;
+
+    @FindBy(xpath = "//select[@id='IDHotel']")
+    public WebElement addTableIDHotelBox;
+
+    @FindBy(xpath = "//select//option")
+    public List<WebElement> addTableIDHotelRoomsList;
+
+    @FindBy(id = "IDGroupRoomType")
+    public WebElement roomTypeBox;
+
+    @FindBy(xpath = "//div[.='HotelRoom was inserted successfully']")
+    public WebElement basariliOdaEklendiYazisi;
+
+    @FindBy(xpath = "//button[.='OK']")
+    public WebElement basariliGirisYazisindanSonrakiOkButonu;
+
+    @FindBy(xpath = "//button[.='Save']")
+    public WebElement roomsEklemeSaveButonu;
 
 }

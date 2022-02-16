@@ -11,6 +11,7 @@ import utilities.Driver;
 
 public class AmazonStepDefinitions {
 
+
     AmazonPage amazonPages=new AmazonPage();
 
     @Given("kullanici amazon sayfasina gider")
@@ -52,11 +53,11 @@ public class AmazonStepDefinitions {
         Assert.assertTrue(sonucYazisiStr.contains("flower"));
     }
 
-
     @Given("{string} icin arama yapar")
     public void icin_arama_yapar(String arananKelime) {
 
         amazonPages.aramaKutusu.sendKeys(arananKelime + Keys.ENTER);
+
     }
     @Then("sonuclarin {string} icerdigini test eder")
     public void sonuclarin_icerdigini_test_eder(String arananKelime) {
@@ -64,19 +65,16 @@ public class AmazonStepDefinitions {
         Assert.assertTrue(sonucYazisiStr.contains(arananKelime));
     }
 
+
     @And("sayfayi kapatir")
     public void sayfayiKapatir() {
-
         Driver.closeDriver();
     }
 
     @Given("kullanici {string} sayfasina gider")
     public void kullaniciSayfasinaGider(String istenenUrl) {
+        Driver.getDriver().get(ConfigReader.getProperty(istenenUrl));
 
-    Driver.getDriver().get(ConfigReader.getProperty(istenenUrl));
     }
-
-
-
 
 }
